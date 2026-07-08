@@ -10,11 +10,11 @@ non-diagnostic disclaimer.
 
 ---
 
-## Why training runs on Kaggle (not locally)
-
 ## Live notebook & model checkpoints
 Full reproducible run (training, Grad-CAM, RAG output) + all three checkpoints:
 <https://www.kaggle.com/code/g1rixh/final-project>
+
+## Why training runs on Kaggle (not locally)
 
 The dataset is ~112k images / ~42 GB and training three CNNs needs a GPU. The
 **dataset is already mounted on Kaggle** ("NIH Chest X-rays"), with a free
