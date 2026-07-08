@@ -12,6 +12,10 @@ non-diagnostic disclaimer.
 
 ## Why training runs on Kaggle (not locally)
 
+## Live notebook & model checkpoints
+Full reproducible run (training, Grad-CAM, RAG output) + all three checkpoints:
+<https://www.kaggle.com/code/g1rixh/final-project>
+
 The dataset is ~112k images / ~42 GB and training three CNNs needs a GPU. The
 **dataset is already mounted on Kaggle** ("NIH Chest X-rays"), with a free
 P100/T4 — so the fastest path is: upload this repo to a Kaggle notebook, attach
