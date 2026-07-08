@@ -1,0 +1,25 @@
+# Core ML / vision
+torch>=2.0
+torchvision>=0.15
+scikit-learn>=1.3
+pandas>=2.0
+numpy>=1.24
+Pillow>=9.5
+matplotlib>=3.7
+
+# Experiment tracking (either works; train.py auto-detects mlflow)
+mlflow>=2.8
+# wandb>=0.16
+
+# RAG
+sentence-transformers>=2.2
+faiss-cpu>=1.7
+
+# LLM providers (install whichever you use)
+google-generativeai>=0.5     # for Gemini
+anthropic>=0.39              # for Claude
+
+# API demo (optional)
+fastapi>=0.110
+uvicorn>=0.27
+python-multipart>=0.0.9

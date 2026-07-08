@@ -1,0 +1,92 @@
+[
+  {
+    "id": "KB-DISCLAIMER",
+    "title": "Non-diagnostic disclaimer",
+    "text": "This system is an automated, assistive research tool. It does NOT provide a\nmedical diagnosis and has not been validated or approved for clinical use. All\noutputs are probabilistic and may be wrong. Final interpretation must be made by\na qualified radiologist or physician using the original images and full clinical\ncontext. This summary must always be read together with this disclaimer."
+  },
+  {
+    "id": "KB-DATASET",
+    "title": "About the ChestX-ray14 labels",
+    "text": "The 14 labels were text-mined from free-text radiology reports using NLP, not\nverified pixel-by-pixel by radiologists for every image. As a result the labels\ncontain noise and uncertainty. Several findings are rare, producing severe class\nimbalance. Reported probabilities reflect the model's learned patterns on this\nimperfect label set, not ground-truth clinical certainty."
+  },
+  {
+    "id": "KB-UNCERTAINTY",
+    "title": "Reading the probabilities",
+    "text": "Each finding carries a sigmoid probability in [0, 1]. Use uncertainty-aware\nlanguage: high probability (>= 0.80), moderate (0.50\u20130.79), low (< 0.50). A high\nprobability is a prompt for human review, never a confirmed diagnosis. Multiple\nfindings can co-occur; absence of a high score does not rule a condition out."
+  },
+  {
+    "id": "KB-LIMITS",
+    "title": "Known model limitations",
+    "text": "The model sees only a single resized frontal radiograph. It has no access to\nlateral views, prior studies, clinical history, or labs. It can be misled by\nimaging artifacts, rotation, projection (AP vs PA), patient positioning, support\ndevices, and image quality. Grad-CAM shows where the model looked, which may or\nmay not correspond to true pathology.\n\n---"
+  },
+  {
+    "id": "KB-ATELECTASIS",
+    "title": "Atelectasis",
+    "text": "Collapse or incomplete expansion of lung tissue. Typical radiographic signs:\nvolume loss, increased opacity, displacement of fissures, and shift of the\nmediastinum or diaphragm toward the affected side. Often subtle and easily\nconfused with other opacities. Common and frequently co-occurs with effusion."
+  },
+  {
+    "id": "KB-CARDIOMEGALY",
+    "title": "Cardiomegaly",
+    "text": "Enlarged cardiac silhouette, classically a cardiothoracic ratio > 0.5 on a\nPA view. AP projection and poor inspiration can falsely enlarge the heart\nshadow, so projection matters. Suggests but does not confirm cardiac disease."
+  },
+  {
+    "id": "KB-EFFUSION",
+    "title": "Effusion (pleural)",
+    "text": "Fluid in the pleural space. Signs: blunting of the costophrenic angle, meniscus\nsign, and homogeneous lower-zone opacity that may layer with positioning. Can\nobscure underlying lung and co-occurs with atelectasis and consolidation."
+  },
+  {
+    "id": "KB-INFILTRATION",
+    "title": "Infiltration",
+    "text": "A broad, non-specific term for ill-defined increased opacity in the lung. Highly\nheterogeneous and noisy in this dataset; overlaps with consolidation, edema, and\natelectasis. Low specificity; interpret cautiously."
+  },
+  {
+    "id": "KB-MASS",
+    "title": "Mass",
+    "text": "A discrete opacity >= 3 cm. Requires correlation with prior imaging and often CT\nfor characterization. Can be mimicked by overlapping structures or nipple\nshadows. A flagged mass warrants radiologist review, not a benign/malignant call."
+  },
+  {
+    "id": "KB-NODULE",
+    "title": "Nodule",
+    "text": "A rounded opacity < 3 cm. Small nodules are easy to miss or to confuse with\nvessels, bony structures, or skin lesions. Management depends on size and risk\nfactors and is outside this model's scope."
+  },
+  {
+    "id": "KB-PNEUMONIA",
+    "title": "Pneumonia",
+    "text": "Airspace opacity reflecting infection; radiographically overlaps heavily with\nconsolidation, atelectasis, and edema. Radiographic diagnosis of pneumonia is\nclinical-radiologic and cannot be made from the image alone. Rare in this\ndataset and noisy."
+  },
+  {
+    "id": "KB-PNEUMOTHORAX",
+    "title": "Pneumothorax",
+    "text": "Air in the pleural space. Signs: a visible visceral pleural line with absent lung\nmarkings peripherally; a large/tension pneumothorax is a medical emergency.\nSubtle apical pneumothoraces are easily missed; expiratory or upright views help."
+  },
+  {
+    "id": "KB-CONSOLIDATION",
+    "title": "Consolidation",
+    "text": "Alveolar filling producing dense opacity, often with air bronchograms. Overlaps\nwith pneumonia, edema, and hemorrhage; the pattern alone does not specify cause."
+  },
+  {
+    "id": "KB-EDEMA",
+    "title": "Edema (pulmonary)",
+    "text": "Fluid accumulation in the lung, commonly cardiogenic. Signs: bilateral perihilar\n(\"bat-wing\") opacities, Kerley B lines, vascular redistribution, sometimes with\neffusions. Distribution and clinical context distinguish causes."
+  },
+  {
+    "id": "KB-EMPHYSEMA",
+    "title": "Emphysema",
+    "text": "Permanent airspace enlargement from alveolar wall destruction. Signs:\nhyperinflation, flattened diaphragms, increased lucency, and a narrow cardiac\nsilhouette. Best characterized on CT; chest radiograph is insensitive to early\ndisease."
+  },
+  {
+    "id": "KB-FIBROSIS",
+    "title": "Fibrosis",
+    "text": "Scarring with reticular opacities, volume loss, and architectural distortion,\noften basal/peripheral. Chronic; comparison with priors is important and CT is\nmore sensitive."
+  },
+  {
+    "id": "KB-PLEURAL_THICKENING",
+    "title": "Pleural Thickening",
+    "text": "Thickening of the pleura, which may follow infection, asbestos exposure, or prior\neffusion/hemorrhage. Can mimic or coexist with small effusions; calcification\nsuggests prior asbestos exposure."
+  },
+  {
+    "id": "KB-HERNIA",
+    "title": "Hernia (diaphragmatic / hiatal)",
+    "text": "Protrusion of abdominal contents into the thorax. May show a retrocardiac\nair-fluid level or bowel gas above the diaphragm. The rarest label in the\ndataset (very few positives), so model estimates are especially unreliable."
+  }
+]
