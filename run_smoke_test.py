@@ -1,6 +1,6 @@
 """
-Smoke test: proves the pipeline logic is correct WITHOUT the real dataset or a
-GPU. Run this first to confirm the repo is wired correctly, then move to Kaggle
+Smoke test proves the pipeline logic is correct WITHOUT the real dataset or a
+GPU. Run this first to confirm the repo is wired correctly, then we move to Kaggle
 for the actual training.
 
     python run_smoke_test.py
