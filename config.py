@@ -1,11 +1,3 @@
-"""
-Central configuration for the NIH ChestX-ray14 project.
-
-Edit DATA_DIR to point at wherever the dataset lives:
-  - On Kaggle: "/kaggle/input/data"  (the NIH Chest X-rays dataset)
-  - Local:     "./data"
-Everything else flows from here.
-"""
 from pathlib import Path
 
 # ----------------------------------------------------------------------------
